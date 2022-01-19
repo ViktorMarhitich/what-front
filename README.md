@@ -1,4 +1,4 @@
-# WHAT 
+# WHA 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 [![Github Issues](https://img.shields.io/github/issues/ita-social-projects/what-front?style=flat-square)](https://github.com/ita-social-projects/what-front/issues)
 [![Pending Pull-Requests](https://img.shields.io/github/issues-pr/ita-social-projects/what-front?style=flat-square)](https://github.com/ita-social-projects/what-front/pulls)
