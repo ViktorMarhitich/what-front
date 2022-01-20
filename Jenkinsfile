@@ -1,19 +1,23 @@
 pipeline {
   agent any
-  options {
-    buildDiscarder(logRotator(numToKeepStr: '5'))
-  }
-  tools {
-    maven 'mv'
-  }
+    
+  tools {nodejs "node"}
+    
   stages {
-    stage('Scan') {
+    stage('Build') {
       steps {
-        withSonarQubeEnv(installationName: 'sq') { 
-          
-          sh './mvnw clean org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
+        sh 'npm install'
+        sh 'npm run build'
+      }
+    }  
+    
+    stage('SonarScan') {
+      steps {
+        withSonarQubeEnv('sq'){
+          sh 'npm run sonar'
         }
       }
-    }
+    }        
+    
   }
 }
