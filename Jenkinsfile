@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'npm adduser --registry=http://3.71.108.127:8081/repository/npm-private/ --always-auth'
+        sh 'npm login registry=http://3.71.108.127:8081/repository/npm-private/'
         sh 'npm install'
         sh 'npm run build'
       }
