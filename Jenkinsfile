@@ -15,7 +15,7 @@ pipeline {
       steps {
         withSonarQubeEnv('sq'){
           sh 'npm install sonar-scanner'
-          sh 'npm run sonar'
+          sh 'npm run sq'
         }
       }
     }        
