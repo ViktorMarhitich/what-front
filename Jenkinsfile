@@ -14,7 +14,7 @@ pipeline {
     stage('SonarScan') {
       steps {
         withSonarQubeEnv('sq'){
-          sh 'npm run sonar'
+          sh 'npm run sq'
         }
       }
     }        
