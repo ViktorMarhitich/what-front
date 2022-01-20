@@ -7,7 +7,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'npm install'
-        
+        sh 'npm run build'
       }
     }
     stage('Code Quality Check via SonarQube') {
@@ -24,6 +24,11 @@ pipeline {
                }
            }
        }
+    }
+    stage('Publish Nexus'){
+      steps {
+        sh 'npm publish'
+      }
     }
   }         
 }
