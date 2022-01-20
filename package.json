@@ -16,7 +16,7 @@
   },
   "publishConfig": {
     "registry": "http://3.71.108.127:8081/repository/npm-group/"
-  }
+  },
   "bugs": {
     "url": "https://github.com/ita-social-projects/what-front/issues"
   },
