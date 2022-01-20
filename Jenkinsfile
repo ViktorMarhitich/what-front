@@ -10,7 +10,7 @@ pipeline {
         sh 'npm run build'
         withSonarQubeEnv('sq'){
           sh 'npm install sonar-scanner'
-          sh 'npm run sq'
+          sh 'npm run sonar'
         }
       }
     }         
