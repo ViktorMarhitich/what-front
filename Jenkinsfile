@@ -27,6 +27,7 @@ pipeline {
     }
     stage('Publish Nexus'){
       steps {
+        sh 'npm adduser --registry=http://3.71.108.127:8081/repository/npm-group/ --always-auth'
         sh 'npm publish'
       }
     }
