@@ -19,16 +19,11 @@ pipeline {
            -Dsonar.projectKey=test-node-js \
            -Dsonar.sources=. \
            -Dsonar.css.node=. \
-           -Dsonar.host.url=http://18.159.109.85:9000 \
-           -Dsonar.login=47b3d4a91136ef824c21ab197621d3fdeb7d55fd"
+           -Dsonar.host.url=http://62.171.182.32:9000 \
+           -Dsonar.login=15373bb1f498a29ede21cacd687bb105dec45d1f"
                }
            }
        }
-    }
-    stage('Publish Nexus'){
-      steps {
-        sh 'npm publish'
-      }
     }
   }         
 }
