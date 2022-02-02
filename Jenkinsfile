@@ -25,5 +25,13 @@ pipeline {
            }
        }
     }
+    
+    stage('Upload to S3'){
+      steps {
+        withAWS(credentials:'myaws'){
+          s3Upload(file:'dist', bucket:'what-front', path:'/var/lib/jenkins/workspace/whatfornt_master/dist/') 
+        }
+      }
+    }
   }         
 }
