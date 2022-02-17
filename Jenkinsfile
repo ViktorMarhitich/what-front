@@ -12,6 +12,7 @@ pipeline {
     }
     stage('Code Quality Check via SonarQube') {
     steps {
+       sh 'npm run test'
        script {
        def scannerHome = tool 'sq';
            withSonarQubeEnv("sq") {
