@@ -21,7 +21,8 @@ pipeline {
            -Dsonar.sources=. \
            -Dsonar.css.node=. \
            -Dsonar.host.url=http://62.171.182.32:9000 \
-           -Dsonar.login=15373bb1f498a29ede21cacd687bb105dec45d1f"
+           -Dsonar.login=15373bb1f498a29ede21cacd687bb105dec45d1f" \
+           -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
                }
            }
        }
