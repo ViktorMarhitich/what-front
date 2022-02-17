@@ -1,1 +1,1 @@
-export const BASE_URL = 'http://api.whatdp.pp.ua';
+export const BASE_URL = 'http://api.whatdp.pp.ua/';
