@@ -37,5 +37,13 @@ pipeline {
         }
       }
     }
+    
+    stage('Invalidate Cloudfront'){
+      steps {
+        withAWS(credentials:'myaws'){
+          cfInvalidate(distribution:'E36WF0UA7OUCJC', paths:['/*']) 
+        }
+      }
+    }
   }         
 }
