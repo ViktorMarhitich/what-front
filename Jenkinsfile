@@ -12,7 +12,9 @@ pipeline {
     }
     stage('Code Quality Check via SonarQube') {
     steps {
-       sh 'npm run test'
+       catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                sh 'npm run test'
+              }
        script {
        def scannerHome = tool 'sq';
            withSonarQubeEnv("sq") {
